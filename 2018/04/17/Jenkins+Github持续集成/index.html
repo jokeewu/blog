@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="前端自动化,前端构建,前端部署," />
 
 
 
@@ -79,12 +79,28 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="JackyCoder">
-<meta property="og:url" content="http://blog.jackywu.xyz/index.html">
+<meta name="description" content="源于对现在部署方案的不满。 环境准备 Github账号及测试项目 网络服务器一台，用于Github通过Webhooks调用通知 网络服务器需安装Node,Git,Jenkins  配置Github项目WebhooksStep1: Github进入项目 &amp;gt; Settings  Step2: 选择Webhooks  其中Secret来源于Jenkins系统，用户 &amp;gt; [具体用户] &amp;gt;">
+<meta name="keywords" content="前端自动化,前端构建,前端部署">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jenkins+Github持续集成">
+<meta property="og:url" content="http://blog.jackywu.xyz/2018/04/17/Jenkins+Github持续集成/index.html">
 <meta property="og:site_name" content="JackyCoder">
+<meta property="og:description" content="源于对现在部署方案的不满。 环境准备 Github账号及测试项目 网络服务器一台，用于Github通过Webhooks调用通知 网络服务器需安装Node,Git,Jenkins  配置Github项目WebhooksStep1: Github进入项目 &amp;gt; Settings  Step2: 选择Webhooks  其中Secret来源于Jenkins系统，用户 &amp;gt; [具体用户] &amp;gt;">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/17/Jenkins+Github持续集成/github-step1.jpeg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/17/Jenkins+Github持续集成/github-step2.jpeg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/17/Jenkins+Github持续集成/jenkins-api-token.jpeg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/17/Jenkins+Github持续集成/create-task.jpeg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/17/Jenkins+Github持续集成/task-config-step1.jpg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/17/Jenkins+Github持续集成/task-config-step2.jpg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/17/Jenkins+Github持续集成/task-config-step3.jpg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/17/Jenkins+Github持续集成/task-config-step4.jpg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/17/Jenkins+Github持续集成/task-config-step5.jpg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/17/Jenkins+Github持续集成/result-success.jpg">
+<meta property="og:updated_time" content="2018-04-17T08:02:11.197Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JackyCoder">
+<meta name="twitter:title" content="Jenkins+Github持续集成">
+<meta name="twitter:description" content="源于对现在部署方案的不满。 环境准备 Github账号及测试项目 网络服务器一台，用于Github通过Webhooks调用通知 网络服务器需安装Node,Git,Jenkins  配置Github项目WebhooksStep1: Github进入项目 &amp;gt; Settings  Step2: 选择Webhooks  其中Secret来源于Jenkins系统，用户 &amp;gt; [具体用户] &amp;gt;">
+<meta name="twitter:image" content="http://blog.jackywu.xyz/2018/04/17/Jenkins+Github持续集成/github-step1.jpeg">
 
 
 
@@ -114,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.jackywu.xyz/"/>
+  <link rel="canonical" href="http://blog.jackywu.xyz/2018/04/17/Jenkins+Github持续集成/"/>
 
 
 
 
 
-  <title>JackyCoder</title>
+  <title>Jenkins+Github持续集成 | JackyCoder</title>
   
 
 
@@ -139,8 +155,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -213,9 +228,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -245,9 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/17/Jenkins+Github持续集成/" itemprop="url">Jenkins+Github持续集成</a></h1>
+          <h1 class="post-title" itemprop="name headline">Jenkins+Github持续集成</h1>
         
 
         <div class="post-meta">
@@ -319,9 +332,7 @@
       
 
       
-        
-          
-            <p>源于对现在部署方案的不满。</p>
+        <p>源于对现在部署方案的不满。</p>
 <h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><ul>
 <li>Github账号及测试项目</li>
 <li>网络服务器一台，用于Github通过Webhooks调用通知</li>
@@ -352,8 +363,6 @@
 <p>Step6: 测试成功</p>
 <img src="/2018/04/17/Jenkins+Github持续集成/result-success.jpg">
 
-          
-        
       
     </div>
     
@@ -368,158 +377,40 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.jackywu.xyz/2016/01/03/前端开发笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jackywu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JackyCoder">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/01/03/前端开发笔记/" itemprop="url">前端开发笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-01-03T20:46:25+08:00">
-                2016-01-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">in</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端开发/" itemprop="url" rel="index">
-                    <span itemprop="name">前端开发</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/前端自动化/" rel="tag"># 前端自动化</a>
           
-
+            <a href="/tags/前端构建/" rel="tag"># 前端构建</a>
           
-            
+            <a href="/tags/前端部署/" rel="tag"># 前端部署</a>
           
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>注：本文用于帮助记忆前端开发遇到的问题及解决方法/方案。</p>
-<h4 id="字体平滑"><a href="#字体平滑" class="headerlink" title="字体平滑"></a>字体平滑</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#app</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-font-smoothing</span>: antialiased;</span><br><span class="line">  <span class="attribute">-moz-osx-font-smoothing</span>: grayscale;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="IOS下普通元素绑定点击事件无效"><a href="#IOS下普通元素绑定点击事件无效" class="headerlink" title="IOS下普通元素绑定点击事件无效"></a>IOS下普通元素绑定点击事件无效</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.js-click</span> &#123;</span><br><span class="line">  <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/03/前端开发笔记/" rel="next" title="前端开发笔记">
+                <i class="fa fa-chevron-left"></i> 前端开发笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -529,10 +420,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -540,6 +432,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -560,8 +456,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -621,6 +526,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境准备"><span class="nav-number">1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Github项目Webhooks"><span class="nav-number">2.</span> <span class="nav-text">配置Github项目Webhooks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Jenkins"><span class="nav-number">3.</span> <span class="nav-text">配置Jenkins</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -754,6 +675,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
