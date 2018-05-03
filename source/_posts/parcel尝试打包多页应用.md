@@ -2,7 +2,8 @@
 title: parcel尝试打包多页应用
 date: 2018-04-17 18:18:28
 tags:
-- 打包
+- Parcel
+- Bundler
 ---
 
 如何安装及如何使用参见[parcel官网](http://www.parceljs.io/)。
