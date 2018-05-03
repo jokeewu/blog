@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="前端自动化,前端构建,前端部署," />
 
 
 
@@ -79,16 +79,29 @@
 
 
 
-<meta name="description" content="Coding on the way!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="JackyCoder">
-<meta property="og:url" content="http://blog.jackywu.xyz/archives/index.html">
+<meta name="description" content="源于对现在部署方案的不满。 环境准备 Github账号及测试项目 网络服务器一台，用于Github通过Webhooks调用通知 网络服务器需安装Node,Git,Jenkins  配置Github项目WebhooksStep1: Github进入项目 &amp;gt; Settings  Step2: 选择Webhooks  其中Secret来源于Jenkins系统，用户 &amp;gt; [具体用户] &amp;gt;">
+<meta name="keywords" content="前端自动化,前端构建,前端部署">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jenkins+Github持续集成">
+<meta property="og:url" content="http://blog.jackywu.xyz/2018/04/18/Jenkins+Github持续集成/index.html">
 <meta property="og:site_name" content="JackyCoder">
-<meta property="og:description" content="Coding on the way!">
+<meta property="og:description" content="源于对现在部署方案的不满。 环境准备 Github账号及测试项目 网络服务器一台，用于Github通过Webhooks调用通知 网络服务器需安装Node,Git,Jenkins  配置Github项目WebhooksStep1: Github进入项目 &amp;gt; Settings  Step2: 选择Webhooks  其中Secret来源于Jenkins系统，用户 &amp;gt; [具体用户] &amp;gt;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/18/Jenkins+Github持续集成/github-step1.jpeg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/18/Jenkins+Github持续集成/github-step2.jpeg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/18/Jenkins+Github持续集成/jenkins-api-token.jpeg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/18/Jenkins+Github持续集成/create-task.jpeg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/18/Jenkins+Github持续集成/task-config-step1.jpg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/18/Jenkins+Github持续集成/task-config-step2.jpg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/18/Jenkins+Github持续集成/task-config-step3.jpg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/18/Jenkins+Github持续集成/task-config-step4.jpg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/18/Jenkins+Github持续集成/task-config-step5.jpg">
+<meta property="og:image" content="http://blog.jackywu.xyz/2018/04/18/Jenkins+Github持续集成/result-success.jpg">
+<meta property="og:updated_time" content="2018-04-18T01:07:32.202Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JackyCoder">
-<meta name="twitter:description" content="Coding on the way!">
+<meta name="twitter:title" content="Jenkins+Github持续集成">
+<meta name="twitter:description" content="源于对现在部署方案的不满。 环境准备 Github账号及测试项目 网络服务器一台，用于Github通过Webhooks调用通知 网络服务器需安装Node,Git,Jenkins  配置Github项目WebhooksStep1: Github进入项目 &amp;gt; Settings  Step2: 选择Webhooks  其中Secret来源于Jenkins系统，用户 &amp;gt; [具体用户] &amp;gt;">
+<meta name="twitter:image" content="http://blog.jackywu.xyz/2018/04/18/Jenkins+Github持续集成/github-step1.jpeg">
 
 
 
@@ -118,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.jackywu.xyz/archives/"/>
+  <link rel="canonical" href="http://blog.jackywu.xyz/2018/04/18/Jenkins+Github持续集成/"/>
 
 
 
 
 
-  <title>归档 | JackyCoder</title>
+  <title>Jenkins+Github持续集成 | JackyCoder</title>
   
 
 
@@ -143,7 +156,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -251,185 +264,230 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.jackywu.xyz/2018/04/18/Jenkins+Github持续集成/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jackywu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JackyCoder">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Jenkins+Github持续集成</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-18T09:07:32+08:00">
+                2018-04-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 4 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CI/" itemprop="url" rel="index">
+                    <span itemprop="name">CI</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/23/webpack打包多页应用/" itemprop="url">
-              
-                <span itemprop="name">webpack打包多页应用</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-23T10:20:44+08:00"
-              content="2018-04-23" >
-          04-23
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/18/Jenkins+Github持续集成/" itemprop="url">
-              
-                <span itemprop="name">Jenkins+Github持续集成</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-18T09:07:32+08:00"
-              content="2018-04-18" >
-          04-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/18/前端开发笔记/" itemprop="url">
-              
-                <span itemprop="name">前端开发笔记(持续更新)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-18T09:07:32+08:00"
-              content="2018-04-18" >
-          04-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>源于对现在部署方案的不满。</p>
+<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><ul>
+<li>Github账号及测试项目</li>
+<li>网络服务器一台，用于Github通过Webhooks调用通知</li>
+<li>网络服务器需安装<a href="https://nodejs.org/" target="_blank" rel="noopener">Node</a>,<a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank" rel="noopener">Git</a>,<a href="https://jenkins.io/doc/pipeline/tour/getting-started/" target="_blank" rel="noopener">Jenkins</a></li>
+</ul>
+<h3 id="配置Github项目Webhooks"><a href="#配置Github项目Webhooks" class="headerlink" title="配置Github项目Webhooks"></a>配置Github项目Webhooks</h3><p>Step1: Github进入项目 &gt; Settings</p>
+<img src="/2018/04/18/Jenkins+Github持续集成/github-step1.jpeg">
+<p>Step2: 选择Webhooks</p>
+<img src="/2018/04/18/Jenkins+Github持续集成/github-step2.jpeg">
+<p>其中Secret来源于Jenkins系统，用户 &gt; [具体用户] &gt; 设置 &gt; API Token</p>
+<img src="/2018/04/18/Jenkins+Github持续集成/jenkins-api-token.jpeg">
+<h3 id="配置Jenkins"><a href="#配置Jenkins" class="headerlink" title="配置Jenkins"></a>配置Jenkins</h3><p>Step1: 安装Generic Webhook Trigger插件</p>
+<p>系统管理 &gt; 管理插件 &gt; 可选插件 &gt; [输入Generic Webhook Trigger]安装</p>
+<p>Step2: 新建任务</p>
+<p>新建任务</p>
+<img src="/2018/04/18/Jenkins+Github持续集成/create-task.jpeg">
+<p>任务配置</p>
+<p>Step1: 基础信息/项目类型</p>
+<img src="/2018/04/18/Jenkins+Github持续集成/task-config-step1.jpg">
+<p>Step2: 源码管理工具</p>
+<img src="/2018/04/18/Jenkins+Github持续集成/task-config-step2.jpg">
+<p>Step3: 触发器配置</p>
+<img src="/2018/04/18/Jenkins+Github持续集成/task-config-step3.jpg">
+<p>Step4: 构建过程脚本命令配置</p>
+<img src="/2018/04/18/Jenkins+Github持续集成/task-config-step4.jpg">
+<p>Step5: 构建邮件通知</p>
+<img src="/2018/04/18/Jenkins+Github持续集成/task-config-step5.jpg">
+<p>Step6: 测试成功</p>
+<img src="/2018/04/18/Jenkins+Github持续集成/result-success.jpg">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/17/parcel尝试打包多页应用/" itemprop="url">
-              
-                <span itemprop="name">parcel尝试打包多页应用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-17T18:18:28+08:00"
-              content="2018-04-17" >
-          04-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="jackywu 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端自动化/" rel="tag"># 前端自动化</a>
+          
+            <a href="/tags/前端构建/" rel="tag"># 前端构建</a>
+          
+            <a href="/tags/前端部署/" rel="tag"># 前端部署</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/18/前端开发笔记/" rel="next" title="前端开发笔记(持续更新)">
+                <i class="fa fa-chevron-left"></i> 前端开发笔记(持续更新)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/23/webpack打包多页应用/" rel="prev" title="webpack打包多页应用">
+                webpack打包多页应用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -437,6 +495,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNTc4Ni8xMjMyMg=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -457,8 +524,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -518,6 +594,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境准备"><span class="nav-number">1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Github项目Webhooks"><span class="nav-number">2.</span> <span class="nav-text">配置Github项目Webhooks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Jenkins"><span class="nav-number">3.</span> <span class="nav-text">配置Jenkins</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -657,6 +749,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -685,6 +781,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

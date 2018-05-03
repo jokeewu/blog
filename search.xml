@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[webpack打包多页应用]]></title>
+    <url>%2F2018%2F04%2F23%2Fwebpack%E6%89%93%E5%8C%85%E5%A4%9A%E9%A1%B5%E5%BA%94%E7%94%A8%2F</url>
+    <content type="text"></content>
+      <tags>
+        <tag>Bundler</tag>
+        <tag>Webpack</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Jenkins+Github持续集成]]></title>
-    <url>%2F2018%2F04%2F17%2FJenkins%2BGithub%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%2F</url>
+    <url>%2F2018%2F04%2F18%2FJenkins%2BGithub%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%2F</url>
     <content type="text"><![CDATA[源于对现在部署方案的不满。 环境准备 Github账号及测试项目 网络服务器一台，用于Github通过Webhooks调用通知 网络服务器需安装Node,Git,Jenkins 配置Github项目WebhooksStep1: Github进入项目 &gt; Settings Step2: 选择Webhooks 其中Secret来源于Jenkins系统，用户 &gt; [具体用户] &gt; 设置 &gt; API Token 配置JenkinsStep1: 安装Generic Webhook Trigger插件 系统管理 &gt; 管理插件 &gt; 可选插件 &gt; [输入Generic Webhook Trigger]安装 Step2: 新建任务 新建任务 任务配置 Step1: 基础信息/项目类型 Step2: 源码管理工具 Step3: 触发器配置 Step4: 构建过程脚本命令配置 Step5: 构建邮件通知 Step6: 测试成功]]></content>
       <categories>
         <category>CI</category>
@@ -14,15 +23,24 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[前端开发笔记]]></title>
-    <url>%2F2016%2F01%2F03%2F%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0%2F</url>
-    <content type="text"><![CDATA[注：本文用于帮助记忆前端开发遇到的问题及解决方法/方案。 字体平滑1234#app &#123; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;&#125; IOS下普通元素绑定点击事件无效123.js-click &#123; cursor: pointer;&#125;]]></content>
+    <title><![CDATA[前端开发笔记(持续更新)]]></title>
+    <url>%2F2018%2F04%2F18%2F%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[注：本文用于帮助记忆前端开发遇到的问题及解决方法/方案。为持续更新文章 字体平滑1234#app &#123; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;&#125; IOS下普通元素绑定点击事件无效123.js-click &#123; cursor: pointer;&#125; Safari下input[type=”number”]提示”输入有效值”当输入小数时，需指定step属性 1&lt;input type="number" step="0.01"/&gt;]]></content>
       <categories>
         <category>前端开发</category>
       </categories>
       <tags>
         <tag>兼容性</tag>
         <tag>Bug</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[parcel尝试打包多页应用]]></title>
+    <url>%2F2018%2F04%2F17%2Fparcel%E5%B0%9D%E8%AF%95%E6%89%93%E5%8C%85%E5%A4%9A%E9%A1%B5%E5%BA%94%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[如何安装及如何使用参见parcel官网。 新建文件_main.html(任意名称)作为项目的入口，将项目功能页面以如下方式引入。 12345678910111213&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;!-- 项目功能页面 --&gt; &lt;a href="index.html"&gt;&lt;/a&gt; &lt;a href="page1.html"&gt;&lt;/a&gt; &lt;a href="page2.html"&gt;&lt;/a&gt; &lt;!-- more --&gt;&lt;/body&gt;&lt;/html&gt; 开发本地预览 1parcel _main.html 构建打包 1parcel build _main.html 在实际开发中打包，本地开发环境搭建是比较繁琐复杂的事情。 就目前项目打包有如下需求： 本地开发预览 以上方法可实现 针对不同的环境打包，替换对应的API根路径 由于从parcel文档中可以看出还没有类似webpack DefinePlugin功能（创建一个在编译时可以配置的全局常量），目前想到的可用方法，采用字符串替换（通过gulp-replace）。 打包成zip压缩包，便于部署 针对此项需求采用gulp/gulp-zip实现 综上，对于简单项目的确可以达到零配置。但对于稍复杂项目还是显得有点不足。]]></content>
+      <tags>
+        <tag>Parcel</tag>
+        <tag>Bundler</tag>
       </tags>
   </entry>
 </search>
