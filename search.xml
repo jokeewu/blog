@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[优秀集锦]]></title>
+    <url>%2F2018%2F05%2F21%2F%E4%BC%98%E7%A7%80%E9%9B%86%E9%94%A6%2F</url>
+    <content type="text"><![CDATA[优秀Github账户 mqyqingfeng JavaScript基础 undefined与null的区别]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>Html</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[webpack打包多页应用]]></title>
     <url>%2F2018%2F04%2F23%2Fwebpack%E6%89%93%E5%8C%85%E5%A4%9A%E9%A1%B5%E5%BA%94%E7%94%A8%2F</url>
     <content type="text"></content>
