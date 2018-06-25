@@ -1,127 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title>原型与原型链</title>
-      <link href="/2018/05/23/%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
-      <url>/2018/05/23/%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/</url>
-      <content type="html"><![CDATA[<p>一张图看清JavaScript原型脉络:</p><img src="/2018/05/23/原型与原型链/prototype.jpeg"><p>留个问题：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype === <span class="built_in">Function</span>.__proto__ <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Object</span>.__proto__ === <span class="built_in">Function</span>.prototype <span class="comment">// true</span></span><br></pre></td></tr></table></figure><p>以上代码如何解释?</p>]]></content>
-      
-      
-        <tags>
-            
-            <tag> JavaScript </tag>
-            
-            <tag> prototype </tag>
-            
-            <tag> 原型 </tag>
-            
-            <tag> 原型链 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>优秀集锦</title>
-      <link href="/2018/05/21/%E4%BC%98%E7%A7%80%E9%9B%86%E9%94%A6/"/>
-      <url>/2018/05/21/%E4%BC%98%E7%A7%80%E9%9B%86%E9%94%A6/</url>
-      <content type="html"><![CDATA[<h1 id="优秀Github账户"><a href="#优秀Github账户" class="headerlink" title="优秀Github账户"></a>优秀Github账户</h1><ul><li><a href="https://github.com/mqyqingfeng" target="_blank" rel="noopener">mqyqingfeng</a></li></ul><h1 id="JavaScript基础"><a href="#JavaScript基础" class="headerlink" title="JavaScript基础"></a>JavaScript基础</h1><ul><li><a href="http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html" target="_blank" rel="noopener">undefined与null的区别</a></li></ul>]]></content>
-      
-      
-        <tags>
-            
-            <tag> JavaScript </tag>
-            
-            <tag> Html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>webpack打包多页应用</title>
-      <link href="/2018/04/23/webpack%E6%89%93%E5%8C%85%E5%A4%9A%E9%A1%B5%E5%BA%94%E7%94%A8/"/>
-      <url>/2018/04/23/webpack%E6%89%93%E5%8C%85%E5%A4%9A%E9%A1%B5%E5%BA%94%E7%94%A8/</url>
-      <content type="html"><![CDATA[]]></content>
-      
-      
-        <tags>
-            
-            <tag> Bundler </tag>
-            
-            <tag> Webpack </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Jenkins+Github持续集成</title>
-      <link href="/2018/04/18/Jenkins+Github%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/"/>
-      <url>/2018/04/18/Jenkins+Github%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/</url>
-      <content type="html"><![CDATA[<p>源于对现在部署方案的不满。</p><h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><ul><li>Github账号及测试项目</li><li>网络服务器一台，用于Github通过Webhooks调用通知</li><li>网络服务器需安装<a href="https://nodejs.org/" target="_blank" rel="noopener">Node</a>,<a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank" rel="noopener">Git</a>,<a href="https://jenkins.io/doc/pipeline/tour/getting-started/" target="_blank" rel="noopener">Jenkins</a></li></ul><h3 id="配置Github项目Webhooks"><a href="#配置Github项目Webhooks" class="headerlink" title="配置Github项目Webhooks"></a>配置Github项目Webhooks</h3><p>Step1: Github进入项目 &gt; Settings</p><img src="/2018/04/18/Jenkins+Github持续集成/github-step1.jpeg"><p>Step2: 选择Webhooks</p><img src="/2018/04/18/Jenkins+Github持续集成/github-step2.jpeg"><p>其中Secret来源于Jenkins系统，用户 &gt; [具体用户] &gt; 设置 &gt; API Token</p><img src="/2018/04/18/Jenkins+Github持续集成/jenkins-api-token.jpeg"><h3 id="配置Jenkins"><a href="#配置Jenkins" class="headerlink" title="配置Jenkins"></a>配置Jenkins</h3><p>Step1: 安装Generic Webhook Trigger插件</p><p>系统管理 &gt; 管理插件 &gt; 可选插件 &gt; [输入Generic Webhook Trigger]安装</p><p>Step2: 新建任务</p><p>新建任务</p><img src="/2018/04/18/Jenkins+Github持续集成/create-task.jpeg"><p>任务配置</p><p>Step1: 基础信息/项目类型</p><img src="/2018/04/18/Jenkins+Github持续集成/task-config-step1.jpg"><p>Step2: 源码管理工具</p><img src="/2018/04/18/Jenkins+Github持续集成/task-config-step2.jpg"><p>Step3: 触发器配置</p><img src="/2018/04/18/Jenkins+Github持续集成/task-config-step3.jpg"><p>Step4: 构建过程脚本命令配置</p><img src="/2018/04/18/Jenkins+Github持续集成/task-config-step4.jpg"><p>Step5: 构建邮件通知</p><img src="/2018/04/18/Jenkins+Github持续集成/task-config-step5.jpg"><p>Step6: 测试成功</p><img src="/2018/04/18/Jenkins+Github持续集成/result-success.jpg">]]></content>
-      
+<search>
+  <entry>
+    <title><![CDATA[前端规范]]></title>
+    <url>%2F2018%2F06%2F25%2F%E5%89%8D%E7%AB%AF%E8%A7%84%E8%8C%83%2F</url>
+    <content type="text"><![CDATA[对于不同的企业有不同的前端（代码/文件目录/打包发布）规范，其下为个人习得或习惯。 代码规范HTML文档统一采用UTF-8编写(设置IDE)代码缩进采用4个空格一个标签多个属性(导致折行)，每个属性单独成行123456789&lt;div data-prop1="1" data-prop2="2" data-prop3="3" data-prop4="4" ...&gt; &lt;!-- ... --&gt;&lt;/div&gt; 注释的使用 用于模块开始和结束 123&lt;!-- 模块名 --&gt;&lt;div class="module"&gt;&lt;/div&gt;&lt;!-- /模块名 --&gt; 用于说明 12&lt;!-- 这是一个组件 --&gt;&lt;div class="component"&gt;&lt;/div&gt; 暂存代码（可能下次需要） 外链样式文件放在head标签之中, 外链JS文件放在body结束标签之前123456789&lt;!-- ... --&gt;&lt;head&gt;&lt;link href="./style.css" rel="stylesheet"&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- ... --&gt;&lt;script src="./index.js"&gt;&lt;/script&gt;&lt;/body&gt;&lt;!-- ... --&gt; 使用标签语意化123&lt;header&gt;&lt;/header&gt;&lt;footer&gt;&lt;/footer&gt;&lt;!-- ... --&gt; 标签正确嵌套 两个标签不能交叉嵌套 1234// Error&lt;span&gt; &lt;div&gt;&lt;/span&gt;&lt;/div&gt; 一般情况下，行内元素不能嵌套块级元素 1234// BAD&lt;span&gt; &lt;div&gt;&lt;/div&gt;&lt;/span&gt; 遵照HTML5声明文档类型1&lt;!DOCTYPE html&gt; 元信息设置12345&lt;meta charset="UTF-8"&gt;&lt;!-- 根据实际情况调整 --&gt;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;&lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;&lt;!-- 其他有利于SEO信息，如: keywords,description等 --&gt; 标签及属性名均采用小写，且属性值采用双引号(“”)，自定义属性以data-开头1234&lt;div class="module" data-prop-name="&lt;propName&gt;"&gt;&lt;/div&gt; CSS/LESS/SASS等css代码位置一般情况下css代码放置于单独文件，外部链接进html文件，特殊情况（页面简单等）下也可将其放入style标签，正常情况下不应在标签上设置样式。在css中不使用@import，除开LESS/SASS文件中。 样式的写法本人一般采用OO结合BEM的写法，OO定义基本的原子类，便于组合，BEM具有一定的模块化封装性。 id与class定义 id采用驼峰形式，如：#fullName class采用小写字母加中划线（-）或下划线（_）,详情说明参考BEM，如：.btn--primary, .user__avatar--small JS中使用class，以js-开头 样式属性顺序:尺寸-&gt;形状-&gt;内填充/外边距-&gt;文字-&gt;位置等（不严格按照这顺序）注释 大的模块/分段 12345678910/** * ================================== * 模块名称, 如：原子类/重置类等 * 描述信息 * ================================== */ .mb15 &#123; margin-bottom: 15px; &#125; 样式属性说明 12345/* 说明 */.className &#123; /* 说明 */ color: #ff0000;&#125; 属性值缩写，如：颜色，font，background等样式换行 不同属性单独成行 12345678/* 不推荐 */.className &#123;font-size: 12px;color: #ff0000;&#125;/* 推荐 */.className &#123; font-size: 14px; color: #ff0000;&#125; 多个class共同样式，不同类名单独成行 123456789/* 不推荐 */.className1,.className2 &#123; /* ... */&#125;/* 推荐 */.className1,.className2 &#123; /* ... */&#125; JavaScript基础规范库/框架jQueryVUEReact文件目录规范SPA (单页应用) project_dir src assets images styles ... components Banner index.js utils date.js currency.js ... pages order Detail.js List.js ... index.js MPA (多页应用) project_dir src assets images styles scripts ... pages page1.js page2.js ... tpls page1.html page2.html ... ``` 打包发布基于现在情况，本公司现在打包基本上采用webpack及相关插件予以实现，采用前端针对开发和生产环境分别打包并生成zip文件（存放在git中）交由后端开发人员部署。 需用到以下工具： node packages：cross-env webpack plugins: webpack.definePlugin/zip-webpack-plugin 当然可以采用jenkins优化发布过程。可以参见《Jenkins+Github持续集成》]]></content>
+      <tags>
+        <tag>规范</tag>
+        <tag>代码规范</tag>
+        <tag>打包</tag>
+        <tag>发布</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[原型与原型链]]></title>
+    <url>%2F2018%2F05%2F23%2F%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE%2F</url>
+    <content type="text"><![CDATA[一张图看清JavaScript原型脉络: 留个问题： 12Function.prototype === Function.__proto__ // trueObject.__proto__ === Function.prototype // true 以上代码如何解释?]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>prototype</tag>
+        <tag>原型</tag>
+        <tag>原型链</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[优秀集锦]]></title>
+    <url>%2F2018%2F05%2F21%2F%E4%BC%98%E7%A7%80%E9%9B%86%E9%94%A6%2F</url>
+    <content type="text"><![CDATA[优秀Github账户 mqyqingfeng JavaScript基础 undefined与null的区别]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>Html</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[webpack打包多页应用]]></title>
+    <url>%2F2018%2F04%2F23%2Fwebpack%E6%89%93%E5%8C%85%E5%A4%9A%E9%A1%B5%E5%BA%94%E7%94%A8%2F</url>
+    <content type="text"></content>
+      <tags>
+        <tag>Bundler</tag>
+        <tag>Webpack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Jenkins+Github持续集成]]></title>
+    <url>%2F2018%2F04%2F18%2FJenkins%2BGithub%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%2F</url>
+    <content type="text"><![CDATA[源于对现在部署方案的不满。 环境准备 Github账号及测试项目 网络服务器一台，用于Github通过Webhooks调用通知 网络服务器需安装Node,Git,Jenkins 配置Github项目WebhooksStep1: Github进入项目 &gt; Settings Step2: 选择Webhooks 其中Secret来源于Jenkins系统，用户 &gt; [具体用户] &gt; 设置 &gt; API Token 配置JenkinsStep1: 安装Generic Webhook Trigger插件 系统管理 &gt; 管理插件 &gt; 可选插件 &gt; [输入Generic Webhook Trigger]安装 Step2: 新建任务 新建任务 任务配置 Step1: 基础信息/项目类型 Step2: 源码管理工具 Step3: 触发器配置 Step4: 构建过程脚本命令配置 Step5: 构建邮件通知 Step6: 测试成功]]></content>
       <categories>
-          
-          <category> CI </category>
-          
+        <category>CI</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 前端自动化 </tag>
-            
-            <tag> 前端构建 </tag>
-            
-            <tag> 前端部署 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>前端开发笔记(持续更新)</title>
-      <link href="/2018/04/18/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/"/>
-      <url>/2018/04/18/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<p>注：本文用于帮助记忆前端开发遇到的问题及解决方法/方案。<code>为持续更新文章</code></p><h4 id="字体平滑"><a href="#字体平滑" class="headerlink" title="字体平滑"></a>字体平滑</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#app</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-font-smoothing</span>: antialiased;</span><br><span class="line">  <span class="attribute">-moz-osx-font-smoothing</span>: grayscale;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="IOS下普通元素绑定点击事件无效"><a href="#IOS下普通元素绑定点击事件无效" class="headerlink" title="IOS下普通元素绑定点击事件无效"></a>IOS下普通元素绑定点击事件无效</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.js-click</span> &#123;</span><br><span class="line">  <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="Safari下input-type-”number”-提示”输入有效值”"><a href="#Safari下input-type-”number”-提示”输入有效值”" class="headerlink" title="Safari下input[type=”number”]提示”输入有效值”"></a>Safari下input[type=”number”]提示”输入有效值”</h4><p>当输入小数时，需指定step属性</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">step</span>=<span class="string">"0.01"</span>/&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-      
+      <tags>
+        <tag>前端自动化</tag>
+        <tag>前端构建</tag>
+        <tag>前端部署</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[前端开发笔记(持续更新)]]></title>
+    <url>%2F2018%2F04%2F18%2F%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[注：本文用于帮助记忆前端开发遇到的问题及解决方法/方案。为持续更新文章 字体平滑1234#app &#123; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;&#125; IOS下普通元素绑定点击事件无效123.js-click &#123; cursor: pointer;&#125; Safari下input[type=”number”]提示”输入有效值”当输入小数时，需指定step属性 1&lt;input type="number" step="0.01"/&gt;]]></content>
       <categories>
-          
-          <category> 前端开发 </category>
-          
+        <category>前端开发</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 兼容性 </tag>
-            
-            <tag> Bug </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>parcel尝试打包多页应用</title>
-      <link href="/2018/04/17/parcel%E5%B0%9D%E8%AF%95%E6%89%93%E5%8C%85%E5%A4%9A%E9%A1%B5%E5%BA%94%E7%94%A8/"/>
-      <url>/2018/04/17/parcel%E5%B0%9D%E8%AF%95%E6%89%93%E5%8C%85%E5%A4%9A%E9%A1%B5%E5%BA%94%E7%94%A8/</url>
-      <content type="html"><![CDATA[<p>如何安装及如何使用参见<a href="http://www.parceljs.io/" target="_blank" rel="noopener">parcel官网</a>。</p><p>新建文件_main.html(任意名称)作为项目的入口，将项目功能页面以如下方式引入。</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 项目功能页面 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"index.html"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"page1.html"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"page2.html"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- more --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure><p>开发本地预览</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parcel _main.html</span><br></pre></td></tr></table></figure><p>构建打包</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parcel build _main.html</span><br></pre></td></tr></table></figure><p>在实际开发中打包，本地开发环境搭建是比较繁琐复杂的事情。</p><p>就目前项目打包有如下需求：</p><ul><li><p>本地开发预览</p><p>  以上方法可实现</p></li><li><p>针对不同的环境打包，替换对应的API根路径</p><p>  由于从parcel文档中可以看出还没有类似webpack DefinePlugin功能（创建一个在编译时可以配置的全局常量），目前想到的可用方法，采用字符串替换（通过gulp-replace）。</p></li><li><p>打包成zip压缩包，便于部署</p><p>  针对此项需求采用gulp/gulp-zip实现</p></li></ul><p>综上，对于简单项目的确可以达到零配置。但对于稍复杂项目还是显得有点不足。</p>]]></content>
-      
-      
-        <tags>
-            
-            <tag> Parcel </tag>
-            
-            <tag> Bundler </tag>
-            
-        </tags>
-      
-    </entry>
-    
-  
-  
+      <tags>
+        <tag>兼容性</tag>
+        <tag>Bug</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[parcel尝试打包多页应用]]></title>
+    <url>%2F2018%2F04%2F17%2Fparcel%E5%B0%9D%E8%AF%95%E6%89%93%E5%8C%85%E5%A4%9A%E9%A1%B5%E5%BA%94%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[如何安装及如何使用参见parcel官网。 新建文件_main.html(任意名称)作为项目的入口，将项目功能页面以如下方式引入。 12345678910111213&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;!-- 项目功能页面 --&gt; &lt;a href="index.html"&gt;&lt;/a&gt; &lt;a href="page1.html"&gt;&lt;/a&gt; &lt;a href="page2.html"&gt;&lt;/a&gt; &lt;!-- more --&gt;&lt;/body&gt;&lt;/html&gt; 开发本地预览 1parcel _main.html 构建打包 1parcel build _main.html 在实际开发中打包，本地开发环境搭建是比较繁琐复杂的事情。 就目前项目打包有如下需求： 本地开发预览 以上方法可实现 针对不同的环境打包，替换对应的API根路径 由于从parcel文档中可以看出还没有类似webpack DefinePlugin功能（创建一个在编译时可以配置的全局常量），目前想到的可用方法，采用字符串替换（通过gulp-replace）。 打包成zip压缩包，便于部署 针对此项需求采用gulp/gulp-zip实现 综上，对于简单项目的确可以达到零配置。但对于稍复杂项目还是显得有点不足。]]></content>
+      <tags>
+        <tag>Parcel</tag>
+        <tag>Bundler</tag>
+      </tags>
+  </entry>
 </search>
