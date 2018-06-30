@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="JackyCoder">
 <meta property="og:description" content="对于不同的企业有不同的前端（代码/文件目录/打包发布）规范，其下为个人习得或习惯。 代码规范HTML文档统一采用UTF-8编写(设置IDE)代码缩进采用4个空格一个标签多个属性(导致折行)，每个属性单独成行123456789&amp;lt;div   data-prop1=&quot;1&quot;  data-prop2=&quot;2&quot;  data-prop3=&quot;3&quot;  data-prop4=&quot;4&quot;  ...&amp;gt;  &amp;lt;!">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-30T15:42:21.324Z">
+<meta property="og:updated_time" content="2018-06-30T15:58:04.204Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端规范">
 <meta name="twitter:description" content="对于不同的企业有不同的前端（代码/文件目录/打包发布）规范，其下为个人习得或习惯。 代码规范HTML文档统一采用UTF-8编写(设置IDE)代码缩进采用4个空格一个标签多个属性(导致折行)，每个属性单独成行123456789&amp;lt;div   data-prop1=&quot;1&quot;  data-prop2=&quot;2&quot;  data-prop3=&quot;3&quot;  data-prop4=&quot;4&quot;  ...&amp;gt;  &amp;lt;!">
@@ -464,8 +464,20 @@
 <h4 id="React"><a href="#React" class="headerlink" title="React"></a>React</h4><ul>
 <li>用create-react-app作为项目的脚手架，初始化搭建项目</li>
 <li>组件书写采用单文件</li>
+<li>为src目录增加resolve.alias，修改webpack配置，以方便文件引用</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack config</span></span><br><span class="line">&#123;</span><br><span class="line">  resolve: &#123;</span><br><span class="line">    alias: &#123;</span><br><span class="line">      <span class="string">'@'</span>: path.resolve(__dirname, <span class="string">'../src'</span>),</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
 <li>采用ES6及JSX编写组件，以提高效率/可读性/可维护性</li>
 <li>组件名及文件名采用帕斯卡命名法（首字母大写，大驼峰）形式，如:MyComponent.js</li>
+<li>组件代码首先引入node_modules中模块，然后再引入自定义组件，其次在引入样式及图片文件</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; List &#125; <span class="keyword">from</span> <span class="string">'antd'</span>;</span><br><span class="line"><span class="keyword">import</span> Banner <span class="keyword">from</span> <span class="string">'./Banner'</span>;</span><br><span class="line"><span class="keyword">import</span> styles <span class="keyword">from</span> <span class="string">'./style.less'</span>;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用装饰器</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@withRouter</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
 <li>按照需要详细定义组件propTypes及defaultProps</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">static</span> propTypes = &#123;</span><br><span class="line">    max: PropTypes.number,</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> defaultProps = &#123;</span><br><span class="line">    max: <span class="number">10</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
