@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: JackyCoder
+title: 诗和远方
 subtitle:
-description: Coding on the way!
+description: 我该有的生活
 keywords:
-author: jackywu
-language: zh-CN
-timezone:
+author: 吴金珂
+language: zh-Hans
+timezone: UTC
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://jokeewu.github.io/blog/
-root: /
+root: /blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: icarus
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

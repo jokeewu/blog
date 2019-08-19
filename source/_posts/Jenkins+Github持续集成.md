@@ -16,6 +16,8 @@ tags:
 - 网络服务器一台，用于Github通过Webhooks调用通知
 - 网络服务器需安装[Node](https://nodejs.org/),[Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git),[Jenkins](https://jenkins.io/doc/pipeline/tour/getting-started/)
 
+<!--more-->
+
 ### 配置Github项目Webhooks
 
 Step1: Github进入项目 > Settings
